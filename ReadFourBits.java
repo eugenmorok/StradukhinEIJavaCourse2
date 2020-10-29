@@ -12,7 +12,9 @@ public class ReadFourBits {
         int number = scan.nextInt();
         System.out.print("Enter group number: ");
         int groupnum = scan.nextInt() * 4;
-        int groupval = number >> groupnum;
+        int groupval = number >>> groupnum;
+        int mask = 15;
+        groupval &= mask;
         System.out.println("Your new number is: ");
         System.out.println(groupval);
         System.out.println("The end of the program");
